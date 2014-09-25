@@ -1,0 +1,57 @@
+/*
+ * Bridger Belyea
+ * September 2014
+ */
+package orderthree;
+import java.util.Scanner;
+public class Orderthree {
+    public static void main(String[] args) {
+        int a,b,c,x,y,z;        
+        a = 0;
+        b = 0;
+        c = 0;
+        x = 0;
+        y = 0;
+        z = 0;
+        System.out.println("This program will order three numbers in ascending order(From smallest to largest)");
+        System.out.print("Enter the 1st number: ");
+        Scanner in = new Scanner (System.in);
+        x = in.nextInt();
+        System.out.print("Ender the 2nd number: ");
+        y = in.nextInt();
+        System.out.print("Ender the 3rd number: ");
+        z = in.nextInt();
+        if (x <= y && x <= z && y <= z)
+        {
+            a = x;
+            b = y;
+            c = z;
+        }
+        else if (x <= y && x <= z && y >= z){
+            a = x;
+            b = z;
+            c = y;
+        }
+        else if (y <= x && y <= z && x <= z){
+            a = y;
+            b = x;
+            c = z;
+        }
+        else if (y <= z && y <= x && z <= x){
+            a = y;
+            b = z;
+            c = x;
+        }
+        else if (z <= y && z <= x && x <= y){
+            a = z;
+            b = x;
+            c = y;
+        }
+        else if(z <= x && z <= y && y <= x){
+            a = z;
+            b = y;
+            c = x;  
+        }
+            System.out.println("" + a + ", " + b + ", " + c);            
+    }    
+}
